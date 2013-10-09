@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'FormtasticBootstrap::FormBuilder#fields_for' do
+describe 'FormtasticFoundation::FormBuilder#fields_for' do
 
   include FormtasticSpecHelper
 
@@ -9,7 +9,7 @@ describe 'FormtasticBootstrap::FormBuilder#fields_for' do
     mock_everything
     @new_post.stub!(:author).and_return(::Author.new)
 
-    Formtastic::Helpers::FormHelper.builder = FormtasticBootstrap::FormBuilder
+    Formtastic::Helpers::FormHelper.builder = FormtasticFoundation::FormBuilder
   end
 
   context 'outside a form_for block' do
@@ -84,9 +84,9 @@ describe 'FormtasticBootstrap::FormBuilder#fields_for' do
           concat(nested_builder.inputs(:login))
         end)
       end)
-      output_buffer.should have_tag('form fieldset.inputs #post_author_1_login_input')
+      output_buffer.should have_tag('form fieldset.inputs #post_author_1_login')
       # Not valid selector, so using good ol' regex
-      output_buffer.should_not =~ /id="post\[author\]_1_login_input"/
+      output_buffer.should_not =~ /id="post\[author\]_1_login"/
       # <=> output_buffer.should_not have_tag('form fieldset.inputs #post[author]_1_login_input')
     end
 
@@ -97,7 +97,7 @@ describe 'FormtasticBootstrap::FormBuilder#fields_for' do
           concat(nested_builder.inputs(:login))
         end)
       end)
-      output_buffer.should have_tag('form fieldset.inputs #context2_post_author_1_login_input')
+      output_buffer.should have_tag('form fieldset.inputs #context2_post_author_1_login')
     end
   end
 
@@ -123,7 +123,7 @@ describe 'FormtasticBootstrap::FormBuilder#fields_for' do
     end
 
     it "should render the hidden input inside an div.hidden" do
-      output_buffer.should have_tag 'div.hidden div.input input#author_posts_attributes_0_id'
+      output_buffer.should have_tag 'input.hidden#author_posts_attributes_0_id'
     end
   end
 

@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe 'FormtasticBootstrap::FormBuilder#actions' do
+describe 'FormtasticFoundation::FormBuilder#actions' do
 
   include FormtasticSpecHelper
 
@@ -96,7 +96,7 @@ describe 'FormtasticBootstrap::FormBuilder#actions' do
       end
 
       it 'should render a button in the fieldset for each default action' do
-        output_buffer.should have_tag('form fieldset.form-actions input.btn', :count => 1)
+        output_buffer.should have_tag('form fieldset.form-actions input.button', :count => 1)
       end
 
     end
@@ -114,7 +114,7 @@ describe 'FormtasticBootstrap::FormBuilder#actions' do
       end
 
       it 'should render a form with a fieldset containing each button arg' do
-        output_buffer.should_not have_tag('form > fieldset.form-actions > input.btn', :count => 3)
+        output_buffer.should_not have_tag('form > fieldset.form-actions > input.button', :count => 3)
       end
 
     end
@@ -128,7 +128,7 @@ describe 'FormtasticBootstrap::FormBuilder#actions' do
      end
 
      it 'should render a form with a fieldset containing each button arg' do
-       output_buffer.should have_tag('form > fieldset.form-actions > .btn', :count => 3)
+       output_buffer.should have_tag('form > fieldset.form-actions > .button', :count => 3)
      end
 
      it 'should pass the options down to the fieldset' do

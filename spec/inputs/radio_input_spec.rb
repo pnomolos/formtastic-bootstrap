@@ -17,7 +17,7 @@ describe 'radio input' do
       end)
     end
 
-    it_should_have_bootstrap_horizontal_wrapping
+    
     it_should_have_input_wrapper_with_class("radio_buttons")
     it_should_have_input_wrapper_with_class(:input)
     it_should_have_input_wrapper_with_id("post_author_input")

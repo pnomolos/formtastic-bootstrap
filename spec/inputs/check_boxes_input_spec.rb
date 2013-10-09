@@ -15,7 +15,7 @@ describe 'check_boxes input' do
       end)
     end
 
-    it_should_have_bootstrap_horizontal_wrapping
+    
     it_should_have_input_wrapper_with_class("check_boxes")
     it_should_have_input_wrapper_with_class(:input)
     it_should_have_input_wrapper_with_id("author_posts_input")

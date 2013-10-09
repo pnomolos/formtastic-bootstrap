@@ -10,3 +10,6 @@ doc
 
 # bundler
 .bundle
+
+# log files
+log

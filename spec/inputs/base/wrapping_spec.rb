@@ -43,29 +43,29 @@ describe "wrapped input" do
 
   describe "content add ons" do
     context "when appended with append_content option" do
-      let(:options) { { :append_content => content_tag(:a, "button appended", :class => "btn")} }
+      let(:options) { { :append_content => content_tag(:a, "button appended", :class => "button")} }
 
       it "should have the appended text to the input in an add-on span" do
-        output_buffer.should have_tag("form div.input-append a.btn", "button appended")
+        output_buffer.should have_tag("form div.input-append a.button", "button appended")
         output_buffer.should_not have_tag("form div.input-append span.add-on")
       end
     end
 
     context "when prepended with prepend_content option" do
-      let(:options) { { :prepend_content => content_tag(:a, "button prepended", :class => "btn")} }
+      let(:options) { { :prepend_content => content_tag(:a, "button prepended", :class => "button")} }
 
       it "should have the prepended text to the input in an add-on span" do
-        output_buffer.should have_tag("form div.input-prepend a.btn", "button prepended")
+        output_buffer.should have_tag("form div.input-prepend a.button", "button prepended")
         output_buffer.should_not have_tag("form div.input-prepend span.add-on")
       end
     end
 
     context "when prepended and appened with prepend and append options" do
-      let(:options) { { :prepend_content => content_tag(:a, "button prepended", :class => "btn"), :append_content => content_tag(:a, "button appended", :class => "btn")} }
+      let(:options) { { :prepend_content => content_tag(:a, "button prepended", :class => "button"), :append_content => content_tag(:a, "button appended", :class => "button")} }
 
       it "should have the prepended text to the input in an add-on span" do
-        output_buffer.should have_tag("form div.input-prepend a.btn", "button prepended")
-        output_buffer.should have_tag("form div.input-append a.btn", "button appended")
+        output_buffer.should have_tag("form div.input-prepend a.button", "button prepended")
+        output_buffer.should have_tag("form div.input-append a.button", "button appended")
       end
     end
 

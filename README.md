@@ -14,11 +14,11 @@ Formtastic Bootstrap has only been tested with Ruby 1.9.2, Rails 3.2.x, Formtast
 
 Install the gem with 
 
-    gem install formtastic-bootstrap
+    gem install formtastic-foundation
 
 Or add it to your Gemfile:
 
-    gem 'formtastic-bootstrap'
+    gem 'formtastic-foundation'
 
 And install it with <tt>bundle install</tt>.
 
@@ -27,12 +27,12 @@ And install it with <tt>bundle install</tt>.
 Add the following line to your Formtastic initialization file:
 
     # config/initializers/formtastic.rb
-    Formtastic::Helpers::FormHelper.builder = FormtasticBootstrap::FormBuilder
+    Formtastic::Helpers::FormHelper.builder = FormtasticFoundation::FormBuilder
 
 Add the following line to the top of your <tt>application.css</tt> file:
 
     # app/assets/stylesheets/application.css
-    *= require formtastic-bootstrap
+    *= require formtastic-foundation
 
 Make sure you've already downloaded and installed Formtastic!
 
@@ -92,7 +92,7 @@ made to generate the HTML expected by Bootstrap while still generating the rich 
         </div>
       </fieldset>
       <div class="actions">
-        <input class="btn create commit" name="commit" type="submit" value="Create Post" />
+        <input class="button create commit" name="commit" type="submit" value="Create Post" />
       </div>
     </form>
 
@@ -162,7 +162,7 @@ use the ```:append_content``` or ```:prepend_content``` option.
 
     <%= semantic_form_for @user do |f| %>
       <%= f.inputs do %>
-        <%= f.input :handle, :append_content => content_tag(:a, "Click Here", :class => 'btn') %>
+        <%= f.input :handle, :append_content => content_tag(:a, "Click Here", :class => 'button') %>
       <% end %>
     <% end %>
 
@@ -170,7 +170,7 @@ use the ```:append_content``` or ```:prepend_content``` option.
  
 ### Contributors
 
-A big thank you [to all contributors](https://github.com/mjbellantoni/formtastic-bootstrap/contributors)!
+A big thank you [to all contributors](https://github.com/mjbellantoni/formtastic-foundation/contributors)!
 
 ### Submitting Issues
 

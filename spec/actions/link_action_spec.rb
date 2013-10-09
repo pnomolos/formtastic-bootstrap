@@ -18,7 +18,7 @@ describe 'LinkAction', 'when cancelling' do
     end
 
     it 'should render a submit type of input' do
-      output_buffer.should have_tag('a[@href="javascript:history.back()"].btn')
+      output_buffer.should have_tag('a[@href="javascript:history.back()"].button')
     end
 
   end
@@ -32,7 +32,7 @@ describe 'LinkAction', 'when cancelling' do
     end
 
     it 'should render a submit type of input' do
-      output_buffer.should have_tag('a[@href="http://foo.bah/baz"].btn')
+      output_buffer.should have_tag('a[@href="http://foo.bah/baz"].button')
     end
 
   end
@@ -46,7 +46,7 @@ describe 'LinkAction', 'when cancelling' do
     end
 
     it 'should render a submit type of input' do
-      output_buffer.should have_tag('a[@href="/mock/path"].btn')
+      output_buffer.should have_tag('a[@href="/mock/path"].button')
     end
 
   end

@@ -15,7 +15,7 @@ describe 'ButtonAction', 'when submitting' do
   end
 
   it 'should render a submit type of button' do
-    output_buffer.should have_tag('button[@type="submit"].btn')
+    output_buffer.should have_tag('button[@type="submit"].button')
   end
 
 end
@@ -34,11 +34,11 @@ describe 'ButtonAction', 'when resetting' do
   end
 
   it 'should render a reset type of button' do
-    output_buffer.should have_tag('button[@type="reset"].btn', :text => "Reset Post")
+    output_buffer.should have_tag('button[@type="reset"].button', :text => "Reset Post")
   end
 
   it 'should not render a value attribute' do
-    output_buffer.should_not have_tag('button[@value].btn')
+    output_buffer.should_not have_tag('button[@value].button')
   end
 
 end

@@ -15,7 +15,7 @@ describe 'InputAction', 'when submitting' do
   end
 
   it 'should render a submit type of input' do
-    output_buffer.should have_tag('input[@type="submit"].btn')
+    output_buffer.should have_tag('input[@type="submit"].button')
   end
 
 end
@@ -34,7 +34,7 @@ describe 'InputAction', 'when resetting' do
   end
 
   it 'should render a reset type of input' do
-    output_buffer.should have_tag('input[@type="reset"].btn')
+    output_buffer.should have_tag('input[@type="reset"].button')
   end
 
 end

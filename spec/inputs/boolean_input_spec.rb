@@ -14,7 +14,7 @@ describe 'boolean input' do
     end)
   end
 
-  it_should_have_bootstrap_horizontal_wrapping
+  
   it_should_have_bootstrap_controls_label_with("checkbox")
   it_should_have_input_wrapper_with_class("boolean")
   it_should_have_input_wrapper_with_class(:input)
