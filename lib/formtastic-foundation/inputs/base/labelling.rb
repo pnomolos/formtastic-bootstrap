@@ -11,7 +11,7 @@ module FormtasticFoundation
 
         def control_label_html_options
           label_html_options.tap do |options|
-            options[:class] << "control-label"
+            options[:class] = ((options[:class] - ['label']) << "control-label")
           end
         end
 
